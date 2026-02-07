@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day 🌹 | A Special Surprise</title>
+    <meta name="description" content="A special Rose Day interactive surprise website for your loved one.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for premium look -->
+</head>
+
+<body>
+    <div id="bg-animation"></div>
+    <div id="music-toggle" title="Toggle Music">🎵</div>
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <main class="container">
+        <!-- Page 1: Name Input -->
+        <section id="page1" class="card">
+            <h1>Happy Rose Day 🌹</h1>
+            <p>Enter your name to see a surprise…</p>
+            <input type="text" id="crushName" placeholder="What's your name? ✨" autocomplete="off">
+            <button id="btn1">Continue 💖</button>
+        </section>
+
+        <!-- Page 2: Welcome -->
+        <section id="page2" class="card hidden">
+            <h2 id="welcomeMsg">Happy Rose Day, [Name] 💕</h2>
+            <p id="revealText" class="hidden">I have something special waiting for you... <br> Are you ready? 😉</p>
+            <button id="btn2">Next ✨</button>
+        </section>
+
+        <!-- Page 3: Rose Puzzle -->
+        <section id="page3" class="card hidden">
+            <h2>Pick a Rose 🌹</h2>
+            <p>One of these roses is specially for you. <br>Choose wisely!</p>
+            <div class="rose-container">
+                <div class="rose" data-id="0">🌹</div>
+                <div class="rose" data-id="1">🌹</div>
+                <div class="rose" data-id="2">🌹</div>
+            </div>
+
+            <div id="puzzleResult" class="hidden">
+                <img id="catGif" src="" alt="Cat Reaction" class="cat-gif">
+                <p id="resultMsg" style="margin-top: 15px; font-weight: 600;"></p>
+                <div class="button-group">
+                    <button id="btn3" class="hidden">Open My Letter 💌</button>
+                    <button id="btnRetry" class="hidden">Try Again 😿</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 4: Letter -->
+        <section id="page4" class="card hidden">
+            <h2>A Message for You 💌</h2>
+            <p>Click the envelope to open your surprise...</p>
+            <div class="envelope-wrapper" id="envelope-wrapper">
+                <div class="envelope" id="envelope">
+                    <div class="letter" id="letterContent">
+                        <!-- Content injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        Made by Soham
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
